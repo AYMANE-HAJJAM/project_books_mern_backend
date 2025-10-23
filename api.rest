@@ -14,6 +14,8 @@ Content-Type: application/json
   "genre": "Software Engineering"
 }
 
+### Getting Things Done
+GET http://localhost:4000/books
 
 
 
@@ -108,3 +110,13 @@ Content-Type: application/json
   "genre": "Software Engineering"
 }
 
+
+### register 
+POST http://localhost:4000/auth/register 
+Content-Type: application/json
+{
+  "username": "ayoub el hanafi",
+  "email": "ayoub@test.com",
+  "password": "ayoub",
+  "role": "admin"
+}

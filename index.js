@@ -2,11 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import { connect } from 'mongoose';
 import {connectToDatabase} from './config/connect.js';
 import booksRoutes from './routes/books.routes.js';
 import ordersRoutes from './routes/orders.routes.js';
 import cookieParser from 'cookie-parser';
+import authRoutes from './routes/auth.routes.js';
 
 dotenv.config();
 
@@ -22,6 +22,7 @@ connectToDatabase();
 
 app.use('/books', booksRoutes);
 app.use('/orders', ordersRoutes);
+app.use('/auth', authRoutes);
 
 
 app.listen(PORT, () => {
